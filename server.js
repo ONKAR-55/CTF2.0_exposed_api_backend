@@ -14,6 +14,10 @@ app.use(express.json());
 
 app.get('/api/employees', (req, res) => {
     const userKey = req.headers['x-api-key'];
+    
+    console.log('Received headers:', req.headers);
+    console.log('API Key received:', userKey);
+    console.log('API Key expected:', LEAKED_API_KEY);
 
     if (userKey === LEAKED_API_KEY) {
         // If the key is correct, return the "secret" data
