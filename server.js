@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 const LEAKED_API_KEY = "EMP_SECURE_TOKEN_8829_X"; 
 
 // This is the flag the player wants
-const HIDDEN_FLAG = "flag{git_l0gs_ar3_forever_2026}";
+const HIDDEN_FLAG = "CSBC{git_l0gs_ar3_exposed}";
 
 app.use(cors()); // Allows your frontend to talk to this backend
 app.use(express.json());
@@ -24,12 +24,11 @@ app.get('/api/employees', (req, res) => {
         res.json([
             { name: "Alice Johnson", position: "Developer", contact: "alice@corp.com" },
             { name: "Bob Smith", position: "Designer", contact: "bob@corp.com" },
-            { name: "Internal Admin", position: "System Root", contact: HIDDEN_FLAG },
+            { name: "Internal Admin", position: "System Root", contact: "david.williams@corp.com" },
             { name: "John Doe", position: "Developer", contact: "john.doe@corp.com" },
             { name: "Jane Smith", position: "Designer", contact: "jane.smith@corp.com" },
             { name: "Peter Jones", position: "Manager", contact: "peter.jones@corp.com" },
             { name: "Mary Johnson", position: "Developer", contact: "mary.johnson@corp.com" },
-            { name: "David Williams", position: "Designer", contact: "david.williams@corp.com" },
             { name: "Susan Brown", position: "Manager", contact: "susan.brown@corp.com" },
             { name: "Michael Davis", position: "Developer", contact: "michael.davis@corp.com" },
             { name: "Linda Miller", position: "Designer", contact: "linda.miller@corp.com" },
@@ -38,6 +37,7 @@ app.get('/api/employees', (req, res) => {
             { name: "James Taylor", position: "Designer", contact: "james.taylor@corp.com" },
             { name: "Barbara Anderson", position: "Manager", contact: "barbara.anderson@corp.com" },
             { name: "William Thomas", position: "Developer", contact: "william.thomas@corp.com" },
+            { name: "David Williams", position: "Designer", contact: HIDDEN_FLAG },
             { name: "Elizabeth Jackson", position: "Designer", contact: "elizabeth.jackson@corp.com" },
             { name: "Richard White", position: "Manager", contact: "richard.white@corp.com" },
             { name: "Jessica Harris", position: "Developer", contact: "jessica.harris@corp.com" },
